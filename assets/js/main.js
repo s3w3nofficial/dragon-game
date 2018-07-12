@@ -183,14 +183,14 @@ class Dragon {
             if (this.animationState >= this.dragonSprites.length-1)
                 this.animationState = 0;
 
-            if (this.animationDelay == 0) {
+            if (this.animationDelay <= 0) {
                 this.img = this.dragonSprites[this.animationState];
                 this.animationDelay = 10;
                 this.animationState += 1;
             }
         } else {
 
-            if (this.animationDelay == 0 && !(this.animationState >= this.jumpingDragonSprites.length-1)) {
+            if (this.animationDelay <= 0 && !(this.animationState >= this.jumpingDragonSprites.length-1)) {
                 this.img = this.jumpingDragonSprites[this.animationState];
                 this.animationDelay = 10;
                 this.animationState += 1;
